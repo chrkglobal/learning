@@ -7,10 +7,10 @@ import Bodycontent from "./Bodycontent";
 function HomePage(){
     return (
         <>
-        <Header/>
-        {/* <Bodycontent /> */}
-        {/* <HomePage /> */}
-        {/* <Footer /> */}
+         <Header/>       
+        <Bodycontent />
+        <HomePage />
+         <Footer />
         </>
     )
 }

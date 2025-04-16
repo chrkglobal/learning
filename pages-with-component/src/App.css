@@ -31,7 +31,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color:#fff
+  color:#fff;
+  position: relative;
+  bottom:0px;
 }
 .app-Bodycontent{
   background-color: #f9f9f9;

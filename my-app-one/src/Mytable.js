@@ -24,7 +24,9 @@ function myFunction(rowIndex){
       
     console.log("111111111111",rowIndex);
 }
-
+function showAlert(){
+    alert("hello");
+}
 function MyBody({ tableData }) {
     const [checkedRows, setCheckedRows] = useState({}); // store which checkboxes are checked
     const handleCheckboxChange = (rowIndex) => {
@@ -42,6 +44,7 @@ function MyBody({ tableData }) {
                     <td style={{width:'30px'}}>
                     <input
                              type="checkbox"
+                             onClick={showAlert}
                              checked={!!checkedRows[rowIndex]}
                              onChange={() => handleCheckboxChange(rowIndex)}
                         />

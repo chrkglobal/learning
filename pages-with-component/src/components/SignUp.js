@@ -6,9 +6,9 @@ function Login() {
         <div style={{ display: 'flex' }}>
             <LoginContent />
             <div className="login-class">
-                <h1>Login</h1>
+                <h1>Sign Up</h1>
                 <form action="">
-                    <div className="imgcontainer">
+                    <div class="imgcontainer">
                         <img src="../../avatar.png" alt="Avatar" class="avatar" />
                     </div>
 
@@ -19,17 +19,11 @@ function Login() {
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="psw" />
 
-                        <button type="submit">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember" /> Remember me
-                        </label>
+                        <label for="eml"><b>Email</b></label>
+                        <input type="password" placeholder="Enter Email" name="eml" />
 
-                        <div class="container" style={{ backgroundColor: '#f1f1f1' }}>
-                            <span className="psw"> Forgot Password?</span>
-                            <button type="button" className="cancelbtn">Cancel</button>
-
-
-                        </div>
+                        <button type="submit">Sign Up</button>
+                         
                     </div>
                 </form>
             </div>

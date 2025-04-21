@@ -1,12 +1,14 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-import MainBody from "./components/MainBody";
-// import "../node_modules/bootstrap/scss/bootstrap";
+import Bodycontent from "./components/Bodycontent";
+
+
 
 function App() {
+
   return (
     <div className="App">
-      <MainBody />
+      <Bodycontent />
     </div>
   );
 }

@@ -1,18 +1,12 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import Bodycontent from "./Bodycontent";
 // https://coreui.io/blog/bootstrap-react-tutorial-with-examples/
 
-function HomePage(){
+function MainBody() {
     return (
         <>
-         <Header/>       
-         <Bodycontent />
-        <HomePage />
-         <Footer />
+            <Bodycontent />
         </>
     )
 }
-
-export default HomePage;
+export default MainBody;

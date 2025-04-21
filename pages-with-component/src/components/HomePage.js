@@ -1,8 +1,12 @@
 import React from "react";
+import LoginMain from "./LoginMain";
 
 function HomePage(){
     return (
-         <h1>Home Page</h1>
+        <div className="home-page">
+            <h1>Home Page</h1>
+            <LoginMain />
+         </div>
     )
 }
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swap Input Values</title>
+</head>
+<body>
+    <script>
+        function swapValues() {
+          var a = document.getElementById('a');
+          var b = document.getElementById('b');
+    
+          var val1 = a.value;
+          a.value = b.value;
+          b.value = val1;
+        }
+        
+      </script>
+  <h2>Swap Values</h2>
+  <input type="text" id="a" value="Ramakrishna">
+  <input type="text" id="b" value="Channagiri">
+  <button onclick="swapValues()">Swap</button>
+
+
+
+</body>
+</html>

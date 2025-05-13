@@ -6,7 +6,6 @@ import './App.css';
 
 function App() {
   const [Employeedetails, setEmployeedetails] = useState(Employees);
-  const [index, setIndex] = useState(0);
   const[searchItem, setSearchItem] = useState('');
   const [selectedValue, setSelectedValue] = useState('ID');
 
@@ -32,8 +31,8 @@ const SearchEmployee = (e) => {
   }
   
  
-   const delete_row =(index) => {
-     setEmployeedetails(Employeedetails.filter((v, i) => i !== index));
+   function delete_row (index) {
+     setEmployeedetails(Employeedetails.filter((m, i) => i !== index));
      console.log(Employeedetails);
    }
  
@@ -42,8 +41,12 @@ const SearchEmployee = (e) => {
    }
 
 
+
+
   return (
     <div className="App">
+
+      
       <div>
         <div style={{textAlign:'right', float:'right', width:'100%'}}>
         <table border="0" width='100%'>

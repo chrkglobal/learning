@@ -4,9 +4,15 @@ import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [dataurl, setdataurl] = useState('https://dummyjson.com/users');
 
-  useEffect(() => {
-    fetch('https://dummyjson.com/users')
+  function search(){
+    setdataurl('https://dummyjson.com/users/1')
+    loadFromUrl();
+  }
+
+  function loadFromUrl(){
+    fetch(dataurl)
       .then((response) => {
 
         if (!response.ok) {
@@ -18,6 +24,21 @@ function App() {
       .then((data) => setPosts(data.users))
       .catch((error) => console.error('Fetch error:', error));
 
+  }
+
+  useEffect(() => {
+    // fetch(dataurl)
+    //   .then((response) => {
+
+    //     if (!response.ok) {
+    //       throw new Error('Network response was not OK');
+    //     }
+    //     return response.json();
+
+    //   })
+    //   .then((data) => setPosts(data.users))
+    //   .catch((error) => console.error('Fetch error:', error));
+loadFromUrl();
   }, []);
 
 
@@ -26,10 +47,13 @@ function App() {
   return (
 
     <>
-      {console.log("User at 0 :", posts.at(0))}
+      {/* {console.log("User at 0 :", posts.at(0))} */}
 
       <div className="App">
-        <h1>API Data Display</h1>
+        <h1>API Data Display
+
+          <input type='button' value="Search" onClick={search} />
+        </h1>
         <div>
           {posts.map((usr) => (
 

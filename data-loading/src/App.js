@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { Employees } from './Components/Employeedetails';
-
 import './App.css';
-
 
 function App() {
   const [Employeedetails, setEmployeedetails] = useState(Employees);
   const[searchItem, setSearchItem] = useState('');
   const [selectedValue, setSelectedValue] = useState('ID');
-
 
   const handleInputChange = (e) => {
     const searchTerm = e.target.value;

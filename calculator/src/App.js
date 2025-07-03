@@ -29,7 +29,6 @@ function App() {
   }
 
   function setButtonValue(event) {
-    const btnValue = event.target.value;
 
     if (value == 0) {
       if (value == event.target.value) { }
@@ -80,10 +79,7 @@ function App() {
           <button type='button' className='button' value='.' onClick={setButtonValue}><b>.</b></button>
           <button type='button' className='button' value='=' onClick={onEquals} >=</button>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        
       </div>
     </div>
   );

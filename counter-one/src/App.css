@@ -7,11 +7,6 @@
   pointer-events: none;
 }
 
-.td{padding:8px;}
-
-table .thead .tr .th{padding:8px; padding-right:10px;}
-
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

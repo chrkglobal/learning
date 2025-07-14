@@ -31,30 +31,26 @@ function App() {
 
       <button onClick={handleAdd}>Add Task</button>
 
-      <ul>
 
-        <table border="1" width="50%" style={{margin:'0px auto'}} cellPadding="0" cellSpacing="0">
+        <table border="1" width="50%" style={{ margin: '0px auto' }} cellPadding="0" cellSpacing="0">
           <thead>
             <tr>
-              <th className='td' style={{textAlign:'left'}}>Task</th>
-               <th  className='td' style={{textAlign:'right'}}>Action</th>
+              <th className='td' style={{ textAlign: 'left' }}>Task</th>
+              <th className='td' style={{ textAlign: 'right' }}>Action</th>
             </tr>
           </thead>
           <tbody>
 
             {taskList.map((item, index) => (
               <tr key={index}>
-                <td className='td' style={{textAlign:'left'}}> {item} </td>
-                <td style={{textAlign:'right'}} className='td'>
+                <td className='td' style={{ textAlign: 'left' }}> {item} </td>
+                <td style={{ textAlign: 'right' }} className='td'>
                   <button onClick={() => handleDelete(index)}>Delete</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-
-
-      </ul>
     </div>
   );
 }

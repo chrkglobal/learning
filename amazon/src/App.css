@@ -15,13 +15,143 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.menu-bar {
+  background-image: none;
+  background-color: #232f3e;
+  padding-left: 11px;
+  height: 40px;
+  color: #fff;
+  padding: 5px;
+  border-bottom: #61dafb;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.nav-global-location-popover-link {
+  padding: 0 9px 0 9px;
+  margin: 5px 2px 5px 0;
+}
+
+.nav-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  line-height: 15px;
+  padding: 7px 10px 10px 0;
+  margin: 0;
+  border: 0;
+  height: 38px;
+  font-family: inherit;
+  font-size: 15px;
+  background: 0 0;
+  color: #111;
+  outline: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  text-indent: 8px;
+  direction: ltr;
+  z-index: 9;
+}
+
+.nav-fill {
+  height: 60px;
+  display: flex;
+  position: static;
+  float: none;
+  -webkit-box: 1;
+  flex: 1 1 auto;
+  overflow: visible;
+}
+
+.logo-right-location-box {
+  width: 15.5rem;
+  height: 2.6rem;
+  display: inline-block;
+  padding-left: 18px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+}
+
+.top-menu {
+  display: inline-block;
+}
+
+.top-menu li {
+  margin: 7px;
+  display: inline-block;
+  margin-left: 22px;
+}
+
+.top-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+.nav-left {
+  margin-right: 0;
+}
+
+.nav-fill {
+  max-height: 39px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  float: none;
+  -webkit-box: 1;
+  -moz-box: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.nav-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  float: none;
+  -webkit-box: 0;
+  -moz-box: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.body-container {
+  display: flow-root;
+  border: 1px solid #f00;
+}
+
+.Left-Side-menu {
+  width: 15%;
+  left: 0px;
+  background-color: #f9f9f9;
+  height: 100vh;
+  float: left;
+}
+
+.right-content-container {
+  width: 80%;
 }
 
 .App-link {
@@ -32,57 +162,42 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.product-iteam-container{
-  border:1px solid #ccc;
-  /* min-width: 25%; */
-  padding: 15px;
-  min-width:250px;
-  max-width:250px;
-  display: inline;
-  float: left;
-  height: auto;
-  margin-top: 15px;
-  min-height: 350px;
-  max-height: 350px;
-  overflow: hidden;
-  margin-left: 40px;
-  margin-bottom: 40px;
-  align-items: center;     /* Vertically center */
-  justify-content: center; /* Horizontally center */
-  gap: 10px;               /* Optional spacing between items */
-  padding: 10px;
+.product-iteam-container {
   border: 1px solid #ccc;
   position: relative;
+  width: 24%;
+  display: inline-grid;
 }
-.product-id{
+
+.product-id {
   border: 1px solid #ccc;
-  width:45px;
+  width: 45px;
   height: 38px;
   font-weight: 800;
-  /* background-color: #f9f9f9; */
   padding-top: 8px;
   border-radius: 50%;
-      border-top-left-radius: 0px;
-    /* margin-top: 15px; */
-    /* margin-bottom: 15px; */
-    position: absolute;
-    top: -16px;
-    left: 0px;
+  border-top-left-radius: 0px;
+  position: absolute;
+  top: -16px;
+  left: 0px;
 }
-.product-iteam-container img{
+
+.product-iteam-container img {
   min-width: 20%;
   max-width: 50%;
   max-height: 100px;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
+
 .one-line-truncate {
   overflow: hidden;
   display: -webkit-box;
@@ -90,6 +205,17 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   font-weight: bold;
+}
+
+ul,
+ol {
+  padding: 0px;
+  margin: 0px;
+}
+
+.logo {
+  width: 115px;
+  height: auto;
 }
 
 .two-line-truncate {

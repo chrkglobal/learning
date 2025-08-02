@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TopHeader } from './data';
 
 function MenuTop(props) {
-
+  const [count, setCount] = useState(0);
   const [Header, setHeader] = useState(TopHeader);
   const [links, setLinks] = useState();
   console.log(TopHeader);
@@ -18,12 +18,7 @@ function MenuTop(props) {
         <div className='nav-fill'>
           <input type='text' className='nav-input' />
         </div>
-        {Header.links.map((link, j) => (
-          <> 
-          {/* <li className='line'>{link.link1} </li> */}
-          {/* <li className='line'>{link.link2} </li>  */}
-          </>
-        ))}
+        
 
       </ul>
 

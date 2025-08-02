@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
     function Product(props) {
       const { product } = props; // Destructure the 'user' prop
 
+      
       return (
        <div className='product-iteam-container' key={product.id}>
             <p className='product-id'>{product.id}</p> 
@@ -11,8 +12,10 @@ import React from 'react';
             <p className='two-line-truncate'>{product.description}</p>
             <p>Category : {product.category}</p>
             <p>Price - <b>{product.price}</b></p>
+             <button className='button' onClick= {()=>props.cartItems(product.id)}>Add to Cart</button>
         </div>
       );
     }
+  
 
     export default Product;

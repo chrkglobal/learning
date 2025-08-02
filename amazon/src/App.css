@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+body{
+  overflow: hidden;
+}
 
 .App-logo {
   height: 40vmin;
@@ -12,7 +15,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.button{
+  cursor: pointer;
+  width:150px;
+}
 .App-header {
   background-color: #282c34;
   height: 60px;
@@ -22,6 +28,23 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.top-menu-container{
+  border:1px solid #ccc;
+  position: relative;
+}
+
+.cart-total{
+  width:auto;
+  height:20px;
+  background-color: #f9f9f9;
+  position: absolute;
+  z-index: 99;
+  top:0px;
+  right:0px;
+  padding:5px;
+  font-size: 11px;
 }
 
 .menu-bar {
@@ -46,7 +69,6 @@
   top: 0;
   left: 0;
   display: block;
-  width: 100%;
   line-height: 15px;
   padding: 7px 10px 10px 0;
   margin: 0;
@@ -84,7 +106,7 @@
 }
 
 .top-menu {
-  display: inline-block;
+  display:contents;
 }
 
 .top-menu li {
@@ -122,6 +144,12 @@
   flex: 1 1 auto;
 }
 
+.Left-Side-menu-container{
+  border:1px solid #f00;
+  max-height: calc(100vh - 80px);
+  overflow-y: scroll;
+  width: 320px;
+}
 .nav-right {
   display: -webkit-box;
   display: -moz-box;
@@ -136,18 +164,51 @@
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
-
+.top-menu{
+  position: fixed;
+}
 .body-container {
   display: flow-root;
-  border: 1px solid #f00;
+  height: calc(100vh - 80px);
+  overflow-y:hidden;
+}
+.body-container-right{
+  width:80%;
+  float: right;
+  height: calc(100vh - 110px);
+  overflow-y: scroll;
 }
 
-.Left-Side-menu {
-  width: 15%;
+.body-container-left{
+  float: left;
+   max-height: calc(100vh - 80px);
+}
+
+.Left-Side-menu { 
   left: 0px;
   background-color: #f9f9f9;
   height: 100vh;
   float: left;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+}
+
+.Left-Side-menu a {
+  background-color: #eee;
+  color: black !important;
+  display: block;
+  padding: 11px 11px;
+  text-decoration: none;
+}
+
+.Left-Side-menu a:hover {
+  background-color: #ccc;
+}
+
+.Left-Side-menu a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
 .right-content-container {
@@ -169,10 +230,14 @@
 }
 
 .product-iteam-container {
-  border: 1px solid #ccc;
-  position: relative;
-  width: 24%;
-  display: inline-grid;
+     display: flow-root;
+    padding: 6px;
+    text-align: center;
+    float: left;
+    width: 24%;
+    position: relative;
+    max-height: 346px;
+    cursor: pointer;
 }
 
 .product-id {

@@ -5,6 +5,9 @@ function MenuItems(props) {
   const { product } = props; // Destructure the 'user' prop
   const [Header, setHeader] = useState(TopHeader);
   const [links, setLinks] = useState();
+
+
+      
   return (
     <div className='menu-bar'>
       <ul className='top-menu'>

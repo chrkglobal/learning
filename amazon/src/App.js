@@ -11,8 +11,9 @@ import SideMenu from './Components/SideMenu';
 import { TopHeader } from './Components/data';
 
 function App() {
- const [links, setLinks] = useState(TopHeader);
-  const [products, setProducts] = useState([]); 
+  const [count, setCount] = useState(0);
+  const [links, setLinks] = useState(TopHeader);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -28,21 +29,36 @@ function App() {
   // }, []);
 
 
+ function cartItems(iteam){
+    setCount(count + 1)
+    console.log(iteam)
+  }
+
+
   return (
     <div className="App">
-      <div className=''>
+      <div className='top-menu-container'>
         <MenuTop />
+        <MenuItems />
+        <div className='cart-total'>{count}</div>
       </div>
       <div className=''>
-        <MenuItems />
+
+        
+
       </div>
-      <div>
-        <SideMenu />
-      </div>
+
       <div className='body-container'>
+        <div className='body-container-left'>
+        <SideMenu />
+        </div>
+        <div className='body-container-right'>
         {products.map((product) => (
-          <Product product={product} />
+          <Product product={product} 
+          cartItems={cartItems}
+           />
         ))}
+        </div>
       </div>
     </div>
   );

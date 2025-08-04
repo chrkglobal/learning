@@ -9,6 +9,7 @@ import MenuItems from './Components/MenuItems';
 import SideMenu from './Components/SideMenu';
 
 import { TopHeader } from './Components/data';
+import DisplayIteamDetails from './Components/DisplayIteamDetails';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,43 +22,36 @@ function App() {
       .then(data => setProducts(data));
   }, []);
 
-  // useEffect(() => {
-  //   fetch('https://dummyjson.com/products')
-  //     .then(res => res.json())
-  //     .then(dataone => setProducts(dataone));
-  //     console.log(dataone);
-  // }, []);
-
-
- function cartItems(iteam){
+  function cartItems(iteam) {
     setCount(count + 1)
     console.log(iteam)
   }
-
 
   return (
     <div className="App">
       <div className='top-menu-container'>
         <MenuTop />
         <MenuItems />
-        <div className='cart-total'>{count}</div>
+        <div className='cart-total'>Selected Iteams {count}<span><a href=''> View Cart</a></span></div>
+        
       </div>
       <div className=''>
 
-        
 
       </div>
 
       <div className='body-container'>
         <div className='body-container-left'>
-        <SideMenu />
+          <SideMenu />
         </div>
         <div className='body-container-right'>
-        {products.map((product) => (
-          <Product product={product} 
-          cartItems={cartItems}
-           />
-        ))}
+          {/* {products.map((product) => (
+            <Product product={product}
+              cartItems={cartItems}
+            />
+          ))} */}
+
+          <DisplayIteamDetails />
         </div>
       </div>
     </div>

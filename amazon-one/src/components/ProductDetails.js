@@ -1,23 +1,11 @@
-import { useParams } from "react-router-dom";
-import { CartContext } from "../context/CartContext";
-import { useContext } from "react";
-
-
 import React from 'react';
 
-function ProductDetails({ product, changeview }) {
-
-  function showProd(){
-    changeview("products");
-    console.log("hello 22")
-  }
-   
-
-  if (!product) return console.log("this is Product", product);
+function ProductDetails({ product, changeView }) {
+  if (!product) return null;
 
   return (
     <div className='product-details-box' style={{ padding: 20 }}>
-      <button onClick={showProd}>🔙 Back</button>
+      <button onClick={() => changeView(null)}>🔙 Back</button>
       <h2>{product.title}</h2>
       <img src={product.image} alt={product.title} style={{ height: 200 }} />
       <p><strong>Price:</strong> ${product.price}</p>
@@ -28,4 +16,3 @@ function ProductDetails({ product, changeview }) {
 }
 
 export default ProductDetails;
-

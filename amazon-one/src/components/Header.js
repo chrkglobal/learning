@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import React from 'react'
 
-function Header() {
-  const { cartItems } = useContext(CartContext);
+export default function Header({ changeView }) {
   return (
     <div className="header">
-      <Link to="/">Home</Link> |{" "}
-      <Link to="/cart">Cart ({cartItems.length})</Link>
-    </div>
-  );
+  <a href="#default" className="logo">CompanyLogo</a>
+  <div className="header-right">
+    <a className="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+  )
 }
-
-export default Header;

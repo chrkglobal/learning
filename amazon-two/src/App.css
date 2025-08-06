@@ -1,0 +1,277 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.two-line-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 0px;
+  margin: 15px 0px 0px 0px;
+}
+
+.one-line-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 49px;
+  background-color: #e1e1e1;
+  line-height: 45px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 49px;
+  background-color: #414141;
+  line-height: 45px;
+  color: #fff;
+}
+body{
+  overflow:hidden;
+}
+.price-rating-container{
+  display: flex;
+}
+.price-rating-container .price, .rating{
+  width: 50%;
+  padding: 5px;
+  color:#fff;
+}
+.price{
+ background-color: #414141;
+}
+.rating{
+background-color: #414141;
+}
+
+.product-container {
+  display: ruby;
+  float: left;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+
+.product-id {
+  position: absolute;
+  top: -16px;
+  right: 0px;
+  width: 35px;
+  height: 35px;
+  background-color: #ccc;
+  border-bottom-left-radius: 30px;
+}
+
+.single-product-container {
+  border: 1px solid #414141;
+  width: 20%; 
+  margin: 5px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+      display: inline-block;
+}
+.view-prod-details-button{
+    cursor: pointer;
+    width: 100%;
+    border: 0px;
+    padding: 1px;
+    height: 30px;
+    background-color: #414141;
+    color: #fff;
+    font-weight: 700;
+}
+
+.single-product-container img {
+  width: 200px;
+  max-height: 200px;
+  min-height: 200px;
+  margin: 0px auto;
+}
+
+/* ///////////////////////////////header////////////////////////////////////// */
+
+/* Add a black background color to the top navigation */
+nav ul li {
+  list-style-type: none;
+}
+
+
+
+
+/* Add a color to the active/current link */
+nav ul li a {
+  color: #414141;
+}
+
+nav ul li a.active {
+  color: #414141;
+}
+
+#logo img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+#logo img svg:path {
+  color: #fff;
+}
+
+
+/*****************************/
+/* Styling Header Image Menu */
+/*****************************/
+#header-image-menu {
+  top: 10px;
+  position: relative;
+}
+
+#header-image-menu img {
+  width: 100%;
+  margin: none;
+  padding: none;
+}
+
+#image-text {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  font-family: 'Roboto';
+  color: #000;
+  transform: translate(-30%, -30%);
+  text-align: center;
+}
+
+/* ///////////////////////////footer////////////////////////////////////////// */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  width: 20px;
+  transition: color .4s ease;
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+#top-header {
+  background-color: #e1e1e1;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  display: flex;
+  position: fixed;
+      width: 100%;
+    margin-bottom: 10px;
+    z-index: 9;
+}
+
+#top-header nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 5px 30px 5px 38px;
+}
+
+#top-header nav ul li a {
+  color: #414141;
+  text-decoration: none;
+}

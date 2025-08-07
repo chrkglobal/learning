@@ -95,8 +95,19 @@ background-color: #414141;
   margin-top: 70px;
   height: calc(100vh - 70px);
   overflow-y: scroll;
+  width: 100%;
 }
-
+.single-product{
+  width: 100%;
+}
+.product-container .single-product-container{
+   width: 20%;
+  margin: 5px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+      display: inline-block;
+}
 .product-id {
   position: absolute;
   top: -16px;
@@ -106,10 +117,19 @@ background-color: #414141;
   background-color: #ccc;
   border-bottom-left-radius: 30px;
 }
+.backtolist-button{
+    height: 25px;
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #61dafb;
+    border: 0px;
+    cursor: pointer;
+}
 
 .single-product-container {
-  border: 1px solid #414141;
-  width: 20%; 
+  border: 1px solid #414141; 
   margin: 5px;
   padding: 30px;
   text-align: center;

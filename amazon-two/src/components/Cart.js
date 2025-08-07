@@ -24,7 +24,9 @@ function showDetails(product){
               <span>Rating: {product.rating.rate}</span>
             </p>
             </div>
-            <div className='view-prod-details-button'><button onClick={()=>showDetails(product)} className='view-prod-details-button'>View Product Details</button></div>
+            <div className='view-prod-details-button'>
+              <button onClick={()=>showDetails(product)} className='view-prod-details-button'>View Product Details</button>
+            </div>
           </div>
 
         ))}

@@ -9,7 +9,7 @@ import Cart from './components/Cart';
 function App() {
   const [products, setProducts] = useState([]);
   // const [changeView, setChangeView] = useState();
-  const [viewcomp, setViewcomp] = useState("productcard");
+  const [viewcomp, setViewcomp] = useState("Home");
   const [viewproduct, setViewproduct] = useState();
   const [activeComp, setActiveComp]= useState();
 
@@ -21,7 +21,7 @@ function App() {
 
    function  updateView(compLabel){
     console.log(compLabel);
-    setActiveComp(compLabel);
+    setViewcomp(compLabel);
    }
 
   function changeView(viewcom, currproduct) {
@@ -30,13 +30,17 @@ function App() {
     console.log("Changing View ::" , viewcom)
   }
 
+  function home(){
+
+  }
+
   return (
     <div className="App">
       <Header updateView={updateView} />
       <div className='product-container'>
-        {viewcomp === "productcard" && <ProductCard products={products} changeView={changeView} />}
-        {viewcomp === "details" && <ProductDetails product={viewproduct} />}
-        {viewcomp === "cart" && <Cart product={viewproduct} />}
+        {viewcomp === "Home" && <ProductCard products={products} changeView={changeView} />}
+        {viewcomp === "details" && <ProductDetails product={viewproduct} changeView={changeView} />}
+        {viewcomp === "cart" && <Cart product={viewproduct} changeView={changeView} />}
         
          
       </div>

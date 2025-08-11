@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Gallery() {
-    const [products, setProducts] = useState([]);
+export default function Gallery({props, products}) {
 
 
-useEffect(() => {
-  fetch('https://fakestoreapi.in/api/products/')
-    .then(res => res.json())
-    .then(data => setProducts(data));
-}, []);
+
 
     return (
         <div className='box'>
             <h1>Gallery</h1>
-            <ul>
+            <div className='product-container'>
                 {products.map((product, index) => (
-                    <li key={index}>{product.id}</li>
+                    <div className='product-box' key={index}>
+                        <img src={product.image} />
+                        </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

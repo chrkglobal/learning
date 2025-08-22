@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Dashboard",
+    "path": "/dashboard",
+    "icon": "📊"
+  },
+  {
+    "title": "Users",
+    "path": "/users",
+    "icon": "👥"
+  },
+  {
+    "title": "Products",
+    "icon": "📦",
+    "children": [
+      { "title": "All Products", "path": "/products" },
+      { "title": "Add Product", "path": "/products/add" },
+      { "title": "Categories", "path": "/products/categories" }
+    ]
+  },
+  {
+    "title": "Orders",
+    "icon": "🛒",
+    "children": [
+      { "title": "All Orders", "path": "/orders" },
+      { "title": "Pending Orders", "path": "/orders/pending" },
+      { "title": "Completed Orders", "path": "/orders/completed" }
+    ]
+  },
+  {
+    "title": "Reports",
+    "path": "/reports",
+    "icon": "📑"
+  },
+  {
+    "title": "Messages",
+    "path": "/messages",
+    "icon": "💬"
+  },
+  {
+    "title": "Settings",
+    "path": "/settings",
+    "icon": "⚙️"
+  },
+  {
+    "title": "Profile",
+    "path": "/profile",
+    "icon": "👤"
+  }
+]

@@ -27,6 +27,17 @@
 .App-link {
   color: #61dafb;
 }
+.login-container input[type="text"] {
+    width: 100%;
+}
+
+.login-container{
+  width: 300px; margin: 100px auto; border: 1px solid #ccc; padding:20px; border-radius: 20px;
+}
+.form-input-text{
+  width:100%;
+}
+
 
 @keyframes App-logo-spin {
   from {
